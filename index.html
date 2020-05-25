@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<meta name="content-language" content="tr-TR" />
+<title>Youtube Anlik Abone Scripti</title>
+<meta name="keywords" content="canlÄ± abone sayacÄ±,kacabone,abone ,youtube canlÄ± abone,canlÄ± abone ,en iyi canlÄ± abone,canlÄ± abone ,canlÄ± abone scripti,youtube tÃ¼rkiye istatistik,en iyi sayaÃ§" />
+<meta name=twitter:card content=summary_large_image>
+<meta name=twitter:site content=YouTube turkey>
+<meta name=twitter:title content="Canli YouTube Abone  ">
+<meta name=twitter:description content="En iyi YouTube canlÄ± abone   sitesi,2 saniye de gÃ¼ncellenir.">
+<meta name="theme-color" content="#c62828">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name=viewport content="initial-scale=1.0001,minimum-scale=1.0001,maximum-scale=1.0001,user-scalable=no">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/canli-youtube.css">
+<link rel="stylesheet" type="text/css" href="assets/css/canli-youtube1.css">
+<link rel="stylesheet" href="assets/css/canli-youtube3.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/canli-youtube2.css">
+<link rel="stylesheet" type="text/css" href="assets/css/sweetalert/google.css">
+</head>
+<body>
+<nav class="youtube">
+<div class="nav-wrapper container">
+<a href="#" class="brand-logo">Youtube Canli Abone</a>
+<ul id="nav-mobile" class="right hide-on-med-and-down">
+
+<li><a href="https://www.facebook.com/IboCanReyis" class="btn waves-effect waves-dark white grey-text text-darken-4"><i class="fa fa-facebook-square blue-text text-lighten-1 left" style="line-height: inherit;"></i> Facebook</a></li>
+
+</ul>
+</div>
+</nav>
+<header id="top" class="youtube" role="navigation">
+<div class="content center">
+<h1 id="logo">YouTube Türkiye İstatistik</h1>
+<h2 id="logo-subtitle" class="fweight-200"><span id="username" class="fweight-400">N/A</span></h5>
+</div>
+</header>
+<main>
+<nav class="row content no-padding white grey-text text-darken-3 valign-wrapper">
+<div class="nav-wrapper">
+<form action="javascript:newUsername();">
+<div class="input-field">
+<input id="search" placeholder="E.g. PewDiePie" type="search" required autofocus>
+<label for="search" class="grey-text text-darken-3"><i class="material-icons">ara</i></label>
+</div>
+</form>
+</div>
+</nav>
+<div class="searchresults row content white grey-text text-darken-3 z-depth-1">
+<ul id="search-results"></ul>
+</div>
+<div class="row content white grey-text text-darken-3 z-depth-1">
+<div class="col s12 m3" style="margin-top:-10px;padding-bottom:10px;">
+<span class="img-helper"></span><img id="channelAvatar" src="assets/images/default-avatar.png" alt="default-avatar" class="circle responsive-img">
+</div>
+<div class="col s12 m9 right-align" style="margin-top:-10px;padding-bottom:10px;">
+<div id="highlightstat"><p id="channelSubs" class="jtextfill">N/A</p></div>
+<div class="subtitle">Abone</div>
+</div>
+</div>
+<div class="row content white grey-text text-darken-3 z-depth-1 valign-wrapper">
+<div>
+
+<div class="row">
+<div class="col no-padding s12 m6 l4">
+<div class="row content padding-16 white grey-text text-darken-3 z-depth-1 normal-stats">
+<div class="col s12 m2">
+<span class="stats-icon"><i class="fa fa-youtube"></i></span>
+</div>
+<div class="col s12 m10 stats-value">
+<span id="channelOldSubs">N/A</span>
+</div>
+</div>
+</div>
+<div class="col no-padding-medium s12 m6 l4">
+<div class="row content padding-16 white grey-text text-darken-3 z-depth-1 normal-stats">
+<div class="col s12 m2">
+<span class="stats-icon"><i class="fa fa-video-camera"></i></span>
+</div>
+<div class="col s12 m10 stats-value">
+<span id="channelVideos">N/A</span>
+</div>
+</div>
+</div>
+<div class="col no-padding s12 l4">
+<div class="row content padding-16 white grey-text text-darken-3 z-depth-1 normal-stats">
+<div class="col s12 m2">
+<span class="stats-icon"><i class="fa fa-eye"></i></span>
+</div>
+<div class="col s12 m10 stats-value">
+<span id="channelViews">N/A</span>
+</div>
+</div>
+</div>
+</div>
+<div class="row content white grey-text text-darken-3 z-depth-1">
+<div class="col s12 m6 l3 center">
+<center>
+<a class="btn-flat waves-effect waves-dark blue darken-1 white-text sharebutton" onclick="RTSC.share('twtr');"><i class="fa fa-twitter left"></i> Tweet</a>
+</div>
+<div class="col s12 m6 l3 center">
+<a class="btn-flat waves-effect waves-dark indigo darken-2 white-text sharebutton" onclick="RTSC.share('fb');"><i class="fa fa-facebook left"></i> Paylaş</a>
+</div>
+<div class="col s12 m6 l3 center">
+<a class="btn-flat waves-effect waves-dark youtube white-text sharebutton" onclick="RTSC.share('yt');"><i class="fa fa-youtube left"></i> Abone Ol</a>
+</div>
+</center>
+</div>
+<div class="row content no-padding white grey-text text-darken-3 z-depth-1 valign-wrapper">
+<div class="full-width">
+<div class="col s12 full-width">
+<ul class="tabs full-width">
+<li class="tab col s3"><a class="active" href="#shareTab">Paylaş</a></li>
+<li class="tab col s3"><a href="#settingsTab">Ayarlar</a></li>
+</ul>
+</div>
+<div id="shareTab" class="col s12 center">
+<p>URL'yi panonuza kopyalamak için aşağıdaki forma tıklayın ve böylece başkalarıyla paylaşın!</p>
+<input type="text" name="url" placeholder="N/A" id="shareURL" onclick="this.select(); copyShareLink('site');" readonly />
+<p>Kullanıcıların istatistiklerinizi doğrudan uygulamanıza yükleyebilmesi için aşağıdaki URL'yi kullanabilirsiniz!</p>
+<input type="text" name="url" placeholder="N/A" id="appURL" onclick="this.select(); copyShareLink('app');" readonly />
+
+</div>
+<div id="settingsTab" class="col s12">
+<div class="row padding-16 container">
+<div class="col s12 padding-16">
+<div class="left">
+Gece Modu :
+</div>
+<div class="switch right">
+<label>
+Kapalı
+<input id="darkModeSetting" type="checkbox">
+<span class="lever"></span>
+Açık
+</label>
+</div>
+</div>
+<div class="col s12 padding-16">
+<div class="left">
+Kanal Resmini Göster:
+</div>
+<div class="switch right">
+<label>
+Kapalı
+<input id="bannerShowSetting" type="checkbox">
+<span class="lever"></span>
+Açık
+</label>
+</div>
+</div>
+<div class="col s12 padding-16">
+
+</div>
+<div class="col s12 padding-16">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<script language="Javascript" src="http://yourjavascript.com/79121303117/canli.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src="assets/js/youtubecanli1.js"></script>
+<script src="assets/js/youtubecanli23.js"></script>
+<script src="assets/js/youtubecanli3.js"></script>
+<script src="assets/js/youtubecanli4.js"></script>
+</body>
+</html>
